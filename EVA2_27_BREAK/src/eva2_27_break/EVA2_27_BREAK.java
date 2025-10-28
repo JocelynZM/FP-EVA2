@@ -1,0 +1,47 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package eva2_27_break;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Usuario
+ */
+public class EVA2_27_BREAK {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        
+        Scanner Captura = new Scanner(System.in);
+        int valor, adivinar;
+        
+        do{
+            adivinar = (int)(Math.random() * 5);
+            
+            System.out.println("ADIVINA EL NUMERO. -1 PARA TERMINAR EL JUEGO");
+            
+            valor = Captura.nextInt();
+            
+            if(valor == adivinar)
+                System.out.println("ADIVINASTE!!");
+            else if (valor == -1){
+                System.out.println("GRACIAS POR JUGAR");
+                
+                break; //termina la ejecucion del ciclo
+            }else{
+                System.out.println("NO ADIVINASTE");
+            }
+            
+        } while(true); //CONDICION PARA REPETIR (TRUE)
+        
+        
+        
+    }
+    
+}
