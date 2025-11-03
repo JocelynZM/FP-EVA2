@@ -19,22 +19,31 @@ public class EVA2_34_PRIMO {
         
         
         int numero;
-        
+         
         Scanner captura = new Scanner(System.in);
         
         System.out.println("INGRESE UN NUMERO: ");
         numero = captura.nextInt();
         
-        int resultado = numero % numero;
-        
+       
+        boolean Es = true;
 
-        if(numero>1){
-            System.out.println("ES PRIMO");
+       for(int i = 2; i<numero; i++){
+           
+            int resultado = numero % i;
             
-        }
-        else{
-            System.out.println("NO ES PRIMO");
-        }
+            if(resultado == 0){//NO ES
+                Es = false;
+                break;
+            }
+        
+    }
+       if(Es){
+           System.out.println("EL VALOR ES PRIMO");
+       }
+       else{
+           System.out.println("NO ES PRIMO");
+       }
     }
     
 }
